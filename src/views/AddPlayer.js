@@ -1,9 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import PlayerForm from '../components/playerForm';
 
-const AddPlayer = () => (
+function AddPlayer({ setPlayers }) {
+  return (
     <div>
-      <h1>Add Player Here</h1>
+      <PlayerForm
+        formTitle='Add Player'
+        setPlayers={setPlayers}
+      />
     </div>
-);
+  );
+}
+
+AddPlayer.propTypes = {
+  setPlayers: PropTypes.func.isRequired
+};
 
 export default AddPlayer;
